@@ -1,0 +1,19 @@
+name: Call-reusableCI
+on: 
+  workflow_dispatch
+  push:
+    paths:
+      - '.github/workflows/*.yaml'
+jobs:
+  Call-testing-reuse:
+    - name:  Run reusable CI
+      steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: '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'
+      - run : |
+          echo " testing"
+          if: ${{github.ref == 'ref/heads/main'
+          echo " this is the repo we need"
+         
+      
